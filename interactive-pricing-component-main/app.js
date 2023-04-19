@@ -2,6 +2,7 @@
 let result = document.querySelector(".pageViews");
 let input = document.querySelector(".slider");
 let pricing = document.querySelector(".pricing");
+let sliderProgress = document.querySelector(".slider-progress");
 let price = document.querySelector(".price");
 let yearOrMonth = document.querySelector(".perYearOrMonth");
 let mToY = document.querySelector(".Switcher");
@@ -34,18 +35,23 @@ const monthlyPricing = () => {
   if (inputValue < 20) {
     result.textContent = `10K PAGEVIEWS`;
     pricing.innerHTML = `<span class="price">$ 8.00</span><span class="perYearOrMonth"> /Month</span>`;
+    sliderProgress.style.cssText = `width: 0%`;
   } else if (inputValue >= 20 && inputValue < 40) {
     result.textContent = `50K PAGEVIEWS`;
     pricing.innerHTML = `<span class="price">$ 12.00</span><span class="perYearOrMonth"> /Month</span>`;
+    sliderProgress.style.cssText = `width: 30%`;
   } else if (inputValue >= 40 && inputValue < 60) {
     result.textContent = `100K PAGEVIEWS`;
     pricing.innerHTML = `<span class="price">$ 16.00</span><span class="perYearOrMonth"> /Month</span>`;
+    sliderProgress.style.cssText = `width: 50%`;
   } else if (inputValue >= 60 && inputValue < 80) {
     result.textContent = `500K PAGEVIEWS`;
     pricing.innerHTML = `<span class="price">$ 24.00</span><span class="perYearOrMonth"> /Month</span>`;
+    sliderProgress.style.cssText = `width: 70%`;
   } else if (inputValue >= 80) {
     result.textContent = `1M PAGEVIEWS`;
     pricing.innerHTML = `<span class="price">$ 36.00</span><span class="perYearOrMonth"> /Month</span>`;
+    sliderProgress.style.cssText = `width: 100%`;
   }
 };
 
@@ -53,6 +59,7 @@ const monthlyPricing = () => {
 window.onload = () => {
   result.textContent = `100K PAGEVIEWS`;
   pricing.innerHTML = `<span class="price">$ 16.00</span><span class="perYearOrMonth"> /Month</span>`;
+  sliderProgress.style.cssText = `width: 50%`;
 };
 
 input.addEventListener("input", () => {
