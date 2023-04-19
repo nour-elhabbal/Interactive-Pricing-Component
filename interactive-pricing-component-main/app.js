@@ -5,7 +5,7 @@ let pricing = document.querySelector(".pricing");
 let sliderProgress = document.querySelector(".slider-progress");
 let price = document.querySelector(".price");
 let yearOrMonth = document.querySelector(".perYearOrMonth");
-let mToY = document.querySelector(".Switcher");
+let mToY = document.querySelector(".switch-core");
 
 // MAIN FUNCTIONS :--
 const yearlyPricing = () => {

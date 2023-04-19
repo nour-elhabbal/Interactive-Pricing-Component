@@ -30,8 +30,6 @@ body {
   background-image: url(./images/bg-pattern.svg);
   background-repeat: no-repeat;
   background-size: 100% 400px;
-
-  overflow-y: hidden;
 }
 
 .appWrapper {
@@ -62,6 +60,7 @@ body {
   background-color: var(--white);
   width: 36%;
   min-width: 500px;
+  max-width: 600px;
   height: max-content;
 
   color: var(--grayish-blue);
@@ -77,12 +76,14 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 35px;
+  margin-bottom: 15px;
 }
+
 .pricing {
   display: flex;
   align-items: center;
 }
+
 .perYearOrMonth,
 .pageViews {
   font-size: 15px;
@@ -93,15 +94,13 @@ body {
   font-size: 35px;
   font-weight: 800;
 }
+
 .slider {
   appearance: none;
   background-color: var(--very-pale-blue);
   border-radius: 50px;
   width: 100%;
   height: 10px;
-
-  /* position: relative;
-  top: 0; */
 }
 
 .slider::-webkit-slider-thumb {
@@ -120,6 +119,19 @@ body {
 
   position: relative;
   z-index: 2;
+}
+
+.slider-progress {
+  display: inline-block;
+  height: 8px;
+
+  background-color: var(--soft-cyan);
+
+  position: relative;
+
+  border-radius: 50px;
+  top: 20px;
+  z-index: 1;
 }
 
 /* progress bar in firefox */
@@ -156,15 +168,143 @@ body {
   }
 }
 
-.slider-progress {
-  display: inline-block;
-  height: 8px;
+.section3-monthToYear {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
 
-  background-color: var(--soft-cyan);
+  padding: 40px 10px 70px 0;
+  border-bottom: 1px solid var(--light-grayish-blue);
+  margin-bottom: 20px;
+}
 
-  position: relative;
+.section3-monthToYear p {
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.switch-core {
+  appearance: none;
+}
+
+.switch {
+  display: flex;
+  flex-direction: row;
+  width: 40px;
+  height: 22px;
+  cursor: pointer;
 
   border-radius: 50px;
-  top: 20px;
-  z-index: 1;
+  background-color: var(--light-grayish-blue);
+}
+
+.switch:hover {
+  background-color: var(--soft-cyan);
+  transition: 0.5s ease-in-out;
+}
+
+.switch-ball {
+  width: 15px;
+  height: 15px;
+
+  border-radius: 50px;
+  margin: auto 3px;
+
+  background-color: rgb(255, 255, 255);
+  transition: 0.3s ease-in-out;
+}
+
+.switch-core:checked ~ .switch-ball {
+  margin: auto 0 auto 20px;
+  transition: 0.3s ease-in-out;
+}
+
+.discount {
+  color: var(--light-red);
+  background-color: var(--light-grayish-red);
+  padding: 3px 5px;
+  border-radius: 20px;
+}
+
+.section4-lastSection {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.section4-lastSection ul li {
+  margin: 7px;
+  list-style: none;
+}
+
+.section4-lastSection ul li::before {
+  content: url("./images/icon-check.svg");
+  margin: 0 10px 0 0;
+  width: 50px;
+}
+
+.startBTN {
+  text-decoration: none;
+  color: var(--grayish-blue);
+  background-color: var(--dark-desaturated-blue);
+  padding: 10px 30px;
+  border-radius: 50px;
+}
+
+.startBTN:hover {
+  color: white;
+}
+
+@media screen and (max-width: 515px) {
+  .header h1 {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  .header p {
+    text-align: center;
+  }
+  .app {
+    width: 90%;
+    min-width: 310px;
+
+    padding: 40px 20px;
+  }
+
+  .section1-pageViews-Pricing {
+    flex-direction: column;
+  }
+
+  .section3-monthToYear {
+    justify-content: center;
+    padding: 40px 0 70px 0;
+    width: 105%;
+
+    gap: 5px;
+  }
+
+  .discount {
+    width: 50px;
+    height: 26px;
+    visibility: hidden;
+  }
+
+  .discount::before {
+    visibility: visible;
+    content: "-25%";
+    margin: auto;
+  }
+
+  .section4-lastSection {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .section4-lastSection ul {
+    margin-bottom: 20px;
+  }
 }
