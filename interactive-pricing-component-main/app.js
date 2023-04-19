@@ -12,7 +12,7 @@ const yearlyPricing = () => {
   let inputValue = input.value;
 
   if (inputValue < 20) {
-    result.textContent = `50K PAGEVIEWS`;
+    result.textContent = `10K PAGEVIEWS`;
     pricing.innerHTML = `<span class="price">$ 72.00</span><span class="perYearOrMonth"> /Year</span>`;
   } else if (inputValue >= 20 && inputValue < 40) {
     result.textContent = `50K PAGEVIEWS`;
