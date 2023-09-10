@@ -23,8 +23,8 @@ Users should be able to:
 
 ### Links
 
-- [Solution URL] (https://github.com/nour-elhabbal/Interactive-Pricing-Component/)
-- [Live Site URL][Add live site URL here](https://interactive-pricing-component-namelh.vercel.app/)
+- [Solution URL](https://github.com/nour-elhabbal/Interactive-Pricing-Component/)
+- [Live Site URL](https://interactive-pricing-component-namelh.vercel.app/)
 
 ## My process
 
